@@ -1,0 +1,102 @@
+@import "_variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+.dashboard_container {
+  margin: 5vh 5vw 5vh 5vw;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 1rem;
+  box-shadow: $box_shadow;
+}
+
+.dashboard_nav {
+  background-color: $green;
+  float: left;
+  width: $nav_width; ///////////////needs calc
+  height: 90vh;
+  border-radius: 1rem 0 0 1rem;
+  text-align: center;
+
+  & li {
+    color: $white;
+    margin: 3rem 0 0 0;
+
+    & i {
+      font-size: 2.5rem;
+    }
+  }
+}
+.dashboard_content {
+  border: 2px solid red;
+  margin: $nav_width; ////////////needs fix
+  width: 75vw;
+  height: 90vh;
+}
+.content_top,
+.content_middle,
+.content_bottom {
+  border: 1px solid red;
+  width: 100%;
+  min-height: 10rem;
+}
+
+.content_top {
+  padding: 2rem;
+
+  & div {
+    display: inline-flex;
+    align-items: center;
+    border: 1px green solid;
+    width: $content_top_item_width;
+    height: $content_top_item_height;
+  }
+
+  & div:nth-child(1) {
+    float: left;
+  }
+  & div:nth-child(2) {
+    float: right;
+  }
+  & i {
+    color: $green;
+    font-size: 3rem;
+  }
+}
+
+.content_middle {
+  padding: 1rem;
+}
+.card {
+  display: flex;
+  width: $card_width;
+  height: $card_height;
+  border-radius: 0.5rem;
+  box-shadow: $box_shadow;
+  padding: 0.5rem;
+  border: 1px red solid;
+  & .card_text {
+  }
+  & .title {
+    color: $black;
+  }
+  & .content {
+    font-size: 2rem;
+    color: $black3;
+  }
+  & .icon {
+    justify-content: space-bewteen;
+    border: 1px solid red;
+  }
+  & .icon i {
+    color: $green;
+    font-size: 3rem;
+  }
+}
